@@ -1,0 +1,141 @@
+// Magic: 383946b6
+// Automatically generated PSI dialog (PSI version 20.5.278)
+// Sat Aug  3 14:26:02 2024
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+menuTrackFrame.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    menuTrackFrame.label = PARM_LABEL_SIMPLE("Track", "menuTrackFrame") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    menuTrackFrame.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+menuDisplay.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    menuDisplay.label = PARM_LABEL_SIMPLE("Display", "menuDisplay") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    menuDisplay.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+MBAmount.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ MBAmount.label = PARM_LABEL("Main_BG: Blur Amt", "MBAmount") WIDTH(1.5);
+ PARM(float, 1, "MBAmount", none, none) RANGE(-2,10)
+	 LABELREF(MBAmount.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+MBSensitivity.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ MBSensitivity.label = PARM_LABEL("Main_BG: Sens", "MBSensitivity") WIDTH(1.5);
+ PARM(float, 1, "MBSensitivity", none, none) RANGE(0,100)
+	 LABELREF(MBSensitivity.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+valMBAmountFG1.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ valMBAmountFG1.label = PARM_LABEL("FG: Blur Amt", "valMBAmountFG1") WIDTH(1.5);
+ PARM(float, 1, "valMBAmountFG1", none, none) RANGE(-2,10)
+	 LABELREF(valMBAmountFG1.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+valMBSensitivityFG1.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ valMBSensitivityFG1.label = PARM_LABEL("FG: Sens", "valMBSensitivityFG1") WIDTH(1.5);
+ PARM(float, 1, "valMBSensitivityFG1", none, none) RANGE(0,100)
+	 LABELREF(valMBSensitivityFG1.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+menuFG1MatteChannel.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    menuFG1MatteChannel.label = PARM_LABEL_SIMPLE("MAT: Use Ch.", "menuFG1MatteChannel") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    menuFG1MatteChannel.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+valFG1InvMatteShrink.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ valFG1InvMatteShrink.label = PARM_LABEL("FG Inv.Matte Shrink", "valFG1InvMatteShrink") WIDTH(1.5);
+ PARM(float, 1, "valFG1InvMatteShrink", none, none) RANGE(0,10)
+	 LABELREF(valFG1InvMatteShrink.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH 
+    menuTrackFrame.gad; 
+    menuDisplay.gad; 
+    MBAmount.gad; 
+    MBSensitivity.gad; 
+    valMBAmountFG1.gad; 
+    valMBSensitivityFG1.gad; 
+    menuFG1MatteChannel.gad; 
+    valFG1InvMatteShrink.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

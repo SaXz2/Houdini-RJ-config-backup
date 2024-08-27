@@ -1,0 +1,51 @@
+{
+	"stats":{
+		"start_time":1722483021,
+		"end_time":1722483326,
+		"idle_time":88,
+		"log_id":"0x16887A4F-0x00003910-0x66AB014E-0x00002623",
+		"persistent_stats":{
+			"colors_scheme":"Houdini Dark"
+		},
+		"flags":[
+		],
+		"counts":{
+			"start_page/window_opened":1,
+			"tools/network/Sop|sop_attribwrangle":1,
+			"hotkey/h.pane.textport.selectall":1,
+			"tools/network/Sop|geometry_sphere":1,
+			"hotkey/h.pane.gview.toggle_wireshaded":3,
+			"tools/network/Dop|dop_popforce":1,
+			"tools/network/Sop|sop_color":1,
+			"tools/network/Object|object_geo":1,
+			"hotkey/h.pane.gview.edit_disp_options":1,
+			"tools/network/Sop|model_popnet":1,
+			"hotkey/h.pane.gview.state.view.frame_all":1
+		},
+		"logs":{
+		},
+		"sums_and_counts":{
+		},
+		"strings":{
+		},
+		"checksum":"fa6c924bdd30441c89f20bb731a74444"
+	},
+	"machine_config":{
+		"houdini_major_version":"20",
+		"houdini_minor_version":"5",
+		"houdini_build_version":"278",
+		"application_name":"houdinifx",
+		"license_category":"Commercial",
+		"platform":"windows-x86_64-cl19.37",
+		"operating_system":"Microsoft Windows 11 \u4e13\u4e1a\u5de5\u4f5c\u7ad9\u7248 x64",
+		"number_of_processors":32,
+		"system_memory":"127.81 GB",
+		"graphics_card":"",
+		"graphics_card_version":"",
+		"mac_address_hash":"de2ddbad2409a455c10ea18c2cef6efd",
+		"user_config_version":20140523,
+		"system_resolution":"2560x1440",
+		"cpu_info":"13th Gen Intel(R) Core(TM) i9-13900KF",
+		"config_hash":"421a787bc7f970c5792abf8d1117dbd0"
+	}
+}

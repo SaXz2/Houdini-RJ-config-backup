@@ -1,0 +1,381 @@
+// Magic: f3581582
+// Automatically generated PSI dialog (PSI version 20.5.278)
+// Sat Aug  3 14:28:02 2024
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+launch_mocha_ui.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("launch_mocha_ui", "Launch mocha UI")
+	push VALUE(launch_mocha_ui.val);
+
+    { WIDTH(0.1) }
+}
+
+views.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    views.label = PARM_LABEL_SIMPLE("Views", "views") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    views.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+swap_views.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("swap_views", "Swap Views") toggle VALUE(swap_views.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+stereo_output.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    stereo_output.label = PARM_LABEL_SIMPLE("Stereo Output", "stereo_output") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    stereo_output.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+view_matte_mattegroupid.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("view_matte_mattegroupid", "View Matte") toggle VALUE(view_matte_mattegroupid.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+apply_matte_mattegroupid.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("apply_matte_mattegroupid", "Apply Matte") toggle VALUE(apply_matte_mattegroupid.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+visible_layers_mattegroupid.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("visible_layers_mattegroupid", "Visible Layers...")
+	push VALUE(visible_layers_mattegroupid.val);
+
+    { WIDTH(0.1) }
+}
+
+visible_layers_mattegroupid.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    visible_layers_mattegroupid.label = PARM_LABEL_SIMPLE("Visible Layers", "visible_layers_mattegroupid") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    visible_layers_mattegroupid.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+feather_mattegroupid.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ feather_mattegroupid.label = PARM_LABEL("Feather", "feather_mattegroupid") WIDTH(1.5);
+ PARM(float, 1, "feather_mattegroupid", none, none) RANGE(0,400)
+	 LABELREF(feather_mattegroupid.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+invert_matte_mattegroupid.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("invert_matte_mattegroupid", "Invert Matte") toggle VALUE(invert_matte_mattegroupid.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+render_modulerendersgroupid.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("render_modulerendersgroupid", "Render") toggle VALUE(render_modulerendersgroupid.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+module_modulerendersgroupid.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    module_modulerendersgroupid.label = PARM_LABEL_SIMPLE("Module", "module_modulerendersgroupid") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    module_modulerendersgroupid.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+warp_quality_modulerendersgroupid.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    warp_quality_modulerendersgroupid.label = PARM_LABEL_SIMPLE("Warp Quality", "warp_quality_modulerendersgroupid") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    warp_quality_modulerendersgroupid.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+view_modulerendersgroupid.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    view_modulerendersgroupid.label = PARM_LABEL_SIMPLE("View", "view_modulerendersgroupid") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    view_modulerendersgroupid.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+vr_lens_latitude_modulerendersgroupid.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ vr_lens_latitude_modulerendersgroupid.label = PARM_LABEL("VR Lens Latitude", "vr_lens_latitude_modulerendersgroupid") WIDTH(1.5);
+ PARM(float, 1, "vr_lens_latitude_modulerendersgroupid", none, none) RANGE(-90,90)
+	 LABELREF(vr_lens_latitude_modulerendersgroupid.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+vr_lens_longitude_modulerendersgroupid.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ vr_lens_longitude_modulerendersgroupid.label = PARM_LABEL("VR Lens Longitude", "vr_lens_longitude_modulerendersgroupid") WIDTH(1.5);
+ PARM(float, 1, "vr_lens_longitude_modulerendersgroupid", none, none) RANGE(-180,180)
+	 LABELREF(vr_lens_longitude_modulerendersgroupid.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+vr_lens_fov_modulerendersgroupid.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ vr_lens_fov_modulerendersgroupid.label = PARM_LABEL("VR Lens FOV", "vr_lens_fov_modulerendersgroupid") WIDTH(1.5);
+ PARM(float, 1, "vr_lens_fov_modulerendersgroupid", none, none) RANGE(1,170)
+	 LABELREF(vr_lens_fov_modulerendersgroupid.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+premultiply_output.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    premultiply_output.label = PARM_LABEL_SIMPLE("Premultiply Output", "premultiply_output") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    premultiply_output.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+license_control_licensegroupid.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("license_control_licensegroupid", "License Control")
+	push VALUE(license_control_licensegroupid.val);
+
+    { WIDTH(0.1) }
+}
+
+requiredExtraFramesValue.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("requiredExtraFramesValue", "requiredExtraFramesValue") toggle VALUE(requiredExtraFramesValue.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+mochaprivatedata1.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    { WIDTH(0.18) }
+
+    mochaprivatedata1.label = PARM_LABEL("mochaPrivateData1", "mochaprivatedata1") WIDTH(1.5);
+    PARM_FIELD(string, "mochaprivatedata1") VALUE(mochaprivatedata1.val) 
+	LABELREF(mochaprivatedata1.label) HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+mochaprivatedata2.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    { WIDTH(0.18) }
+
+    mochaprivatedata2.label = PARM_LABEL("mochaPrivateData2", "mochaprivatedata2") WIDTH(1.5);
+    PARM_FIELD(string, "mochaprivatedata2") VALUE(mochaprivatedata2.val) 
+	LABELREF(mochaprivatedata2.label) HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+licenseGroupID.gad = 
+GROUP collapsible "License and Registration" flat   
+{
+    VALUE(licenseGroupID.gad.val) LAYOUT(vertical) HSTRETCH
+	    license_control_licensegroupid.gad;		
+} 
+
+moduleRendersGroupID.gad = 
+GROUP collapsible "Module Renders" flat   
+{
+    VALUE(moduleRendersGroupID.gad.val) LAYOUT(vertical) HSTRETCH
+	    render_modulerendersgroupid.gad;		
+	    module_modulerendersgroupid.gad;		
+	    warp_quality_modulerendersgroupid.gad;		
+	    view_modulerendersgroupid.gad;		
+	    vr_lens_latitude_modulerendersgroupid.gad;		
+	    vr_lens_longitude_modulerendersgroupid.gad;		
+	    vr_lens_fov_modulerendersgroupid.gad;		
+} 
+
+matteGroupID.gad = 
+GROUP collapsible "Matte" flat   
+{
+    VALUE(matteGroupID.gad.val) LAYOUT(vertical) HSTRETCH
+	    view_matte_mattegroupid.gad;		
+	    apply_matte_mattegroupid.gad;		
+	    visible_layers_mattegroupid.gad;		
+	    visible_layers_mattegroupid.gad;		
+	    feather_mattegroupid.gad;		
+	    invert_matte_mattegroupid.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH 
+    launch_mocha_ui.gad; 
+    views.gad; 
+    swap_views.gad; 
+    stereo_output.gad; 
+    matteGroupID.gad; 
+    moduleRendersGroupID.gad; 
+    premultiply_output.gad; 
+    licenseGroupID.gad; 
+    requiredExtraFramesValue.gad; 
+    mochaprivatedata1.gad; 
+    mochaprivatedata2.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

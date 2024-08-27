@@ -1,0 +1,504 @@
+// Magic: e6b79a21
+// Automatically generated PSI dialog (PSI version 20.5.278)
+// Sat Aug  3 14:37:35 2024
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+Mode.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    Mode.label = PARM_LABEL_SIMPLE("Mode", "Mode") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    Mode.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+LoadPreset.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("LoadPreset", "Load Preset")
+	push VALUE(LoadPreset.val);
+
+    { WIDTH(0.1) }
+}
+
+SavePreset.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("SavePreset", "Save Preset")
+	push VALUE(SavePreset.val);
+
+    { WIDTH(0.1) }
+}
+
+EditMocha.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("EditMocha", "Edit Mocha")
+	push VALUE(EditMocha.val);
+
+    { WIDTH(0.1) }
+}
+
+mocha_project.gad = ROW
+{
+    HSTRETCH JUSTIFY(left, center)
+
+    { WIDTH(0.18) }
+
+    mocha_project.label = PARM_LABEL("Mocha Project", "mocha_project") WIDTH(1.5);
+    PARM_FIELD(string, "mocha_project") VALUE(mocha_project.val) 
+	LABELREF(mocha_project.label) HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+blur_mocha.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ blur_mocha.label = PARM_LABEL("Blur Mocha", "blur_mocha") WIDTH(1.5);
+ PARM(float, 1, "blur_mocha", none, none) RANGE(0,0.5)
+	 LABELREF(blur_mocha.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+mocha_opacity.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ mocha_opacity.label = PARM_LABEL("Mocha Opacity", "mocha_opacity") WIDTH(1.5);
+ PARM(float, 1, "mocha_opacity", none, none) RANGE(0,1)
+	 LABELREF(mocha_opacity.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+invert_mocha.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("invert_mocha", "Invert Mocha") toggle VALUE(invert_mocha.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+resize_mocha.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ resize_mocha.label = PARM_LABEL("Resize Mocha", "resize_mocha") WIDTH(1.5);
+ PARM(float, 1, "resize_mocha", none, none) RANGE(0,2)
+	 LABELREF(resize_mocha.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+resize_rel_x.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ resize_rel_x.label = PARM_LABEL("Resize Rel X", "resize_rel_x") WIDTH(1.5);
+ PARM(float, 1, "resize_rel_x", none, none) RANGE(0,2)
+	 LABELREF(resize_rel_x.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+resize_rel_y.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ resize_rel_y.label = PARM_LABEL("Resize Rel Y", "resize_rel_y") WIDTH(1.5);
+ PARM(float, 1, "resize_rel_y", none, none) RANGE(0,2)
+	 LABELREF(resize_rel_y.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+shift_mocha_x.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ shift_mocha_x.label = PARM_LABEL("Shift Mocha X", "shift_mocha_x") WIDTH(1.5);
+ PARM(float, 1, "shift_mocha_x", none, none) RANGE(-1,1)
+	 LABELREF(shift_mocha_x.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+shift_mocha_y.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ shift_mocha_y.label = PARM_LABEL("Shift Mocha Y", "shift_mocha_y") WIDTH(1.5);
+ PARM(float, 1, "shift_mocha_y", none, none) RANGE(-1,1)
+	 LABELREF(shift_mocha_y.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+bypass_mocha.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("bypass_mocha", "Bypass Mocha") toggle VALUE(bypass_mocha.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+show_mocha_only.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("show_mocha_only", "Show Mocha Only") toggle VALUE(show_mocha_only.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+combine_masks.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    combine_masks.label = PARM_LABEL_SIMPLE("Combine Masks", "combine_masks") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    combine_masks.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+blur_amount.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ blur_amount.label = PARM_LABEL("Blur Amount", "blur_amount") WIDTH(1.5);
+ PARM(float, 1, "blur_amount", none, none) RANGE(0,0.5)
+	 LABELREF(blur_amount.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+blur_rel_x.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ blur_rel_x.label = PARM_LABEL("Blur Rel X", "blur_rel_x") WIDTH(1.5);
+ PARM(float, 1, "blur_rel_x", none, none) RANGE(0,5)
+	 LABELREF(blur_rel_x.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+blur_rel_y.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ blur_rel_y.label = PARM_LABEL("Blur Rel Y", "blur_rel_y") WIDTH(1.5);
+ PARM(float, 1, "blur_rel_y", none, none) RANGE(0,5)
+	 LABELREF(blur_rel_y.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+brightness.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ brightness.label = PARM_LABEL("Brightness", "brightness") WIDTH(1.5);
+ PARM(float, 1, "brightness", none, none) RANGE(0,5)
+	 LABELREF(brightness.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+scale_opacity.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ scale_opacity.label = PARM_LABEL("Scale Opacity", "scale_opacity") WIDTH(1.5);
+ PARM(float, 1, "scale_opacity", none, none) RANGE(0,1)
+	 LABELREF(scale_opacity.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+offset_darks.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ offset_darks.label = PARM_LABEL("Offset Darks", "offset_darks") WIDTH(1.5);
+ PARM(float, 1, "offset_darks", none, none) RANGE(-5,1)
+	 LABELREF(offset_darks.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+mix_with_source.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ mix_with_source.label = PARM_LABEL("Mix With Source", "mix_with_source") WIDTH(1.5);
+ PARM(float, 1, "mix_with_source", none, none) RANGE(0,1)
+	 LABELREF(mix_with_source.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+filter.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    filter.label = PARM_LABEL_SIMPLE("Filter", "filter") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    filter.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+subpixel.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("subpixel", "Subpixel") toggle VALUE(subpixel.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+soft_borders.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("soft_borders", "Soft Borders") toggle VALUE(soft_borders.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+invert_mask.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("invert_mask", "Invert Mask") toggle VALUE(invert_mask.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+mask_use.gad = 
+{
+    LAYOUT(horizontal) JUSTIFY(left, center) HSTRETCH
+    { WIDTH(0.18) }
+
+    mask_use.label = PARM_LABEL_SIMPLE("Mask Use", "mask_use") WIDTH(1.5);
+    { WIDTH(0.09) }
+
+    mask_use.menu;
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+help.gad = ROW
+{
+    JUSTIFY(left, center)
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.1) }
+
+    PARM_BUTTON("help", "Help")
+	push VALUE(help.val);
+
+    { WIDTH(0.1) }
+}
+
+Enable_GPU.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("Enable_GPU", "Enable GPU") toggle VALUE(Enable_GPU.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+version.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ version.label = PARM_LABEL("version", "version") WIDTH(1.5);
+ PARM(float, 1, "version", none, none) RANGE(0,1)
+	 LABELREF(version.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+version2.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ version2.label = PARM_LABEL("version2", "version2") WIDTH(1.5);
+ PARM(integer, 1, "version2", none, none) RANGE(-2147483648,2147483648)
+	 LABELREF(version2.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+group_0.gad = 
+GROUP collapsible "Mocha" flat   
+{
+    VALUE(group_0.gad.val) LAYOUT(vertical) HSTRETCH
+	    blur_mocha.gad;		
+	    mocha_opacity.gad;		
+	    invert_mocha.gad;		
+	    resize_mocha.gad;		
+	    resize_rel_x.gad;		
+	    resize_rel_y.gad;		
+	    shift_mocha_x.gad;		
+	    shift_mocha_y.gad;		
+	    bypass_mocha.gad;		
+	    show_mocha_only.gad;		
+	    combine_masks.gad;		
+} 
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH 
+    Mode.gad; 
+    LoadPreset.gad; 
+    SavePreset.gad; 
+    EditMocha.gad; 
+    mocha_project.gad; 
+    group_0.gad; 
+    blur_amount.gad; 
+    blur_rel_x.gad; 
+    blur_rel_y.gad; 
+    brightness.gad; 
+    scale_opacity.gad; 
+    offset_darks.gad; 
+    mix_with_source.gad; 
+    filter.gad; 
+    subpixel.gad; 
+    soft_borders.gad; 
+    invert_mask.gad; 
+    mask_use.gad; 
+    help.gad; 
+    Enable_GPU.gad; 
+    version.gad; 
+    version2.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}
